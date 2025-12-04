@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste da Lib</title>
+    <style>body { font-family: sans-serif; padding: 20px; background: #eee; }</style>
+</head>
+<body>
+    <h1>Teste da Biblioteca</h1>
+    <button id="btn">Ping</button>
+    <p id="resultado">Aguardando...</p>
+
+    <script>
+        // Ouve resposta do Backend
+        window.api.on('pong', (data) => {
+            document.getElementById('resultado').innerText = data.msg;
+            document.getElementById('resultado').style.color = 'green';
+        });
+
+        // Envia para o Backend
+        document.getElementById('btn').onclick = () => {
+            window.api.send('ping', { text: 'Olá Backend!' });
+        };
+    </script>
+</body>
+</html>
