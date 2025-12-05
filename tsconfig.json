@@ -1,14 +1,16 @@
 {
   "compilerOptions": {
-    "target": "ES6",
-    "module": "commonjs",      
-    "moduleResolution": "node",
-    "declaration": true,       
-    "outDir": "./dist",         
+    "target": "ES2019",          // Compatível com Electron moderno
+    "module": "CommonJS",        // O padrão do Electron Main
+    "moduleResolution": "node",  // <--- O SEGREDO: Remove a obrigação do .js
+    "declaration": true,         // Gera os .d.ts
+    "outDir": "./dist",
+    "rootDir": "./src/lib",      // Força a estrutura plana na dist
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "resolveJsonModule": true
   },
-  "include": ["src/**/*"],     
-  "exclude": ["src/app", "**/*.test.ts"] 
+  "include": ["src/lib/**/*"],
+  "exclude": ["src/app", "node_modules", "dist", "**/*.test.ts"]
 }

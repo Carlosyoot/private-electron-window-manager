@@ -1,12 +1,29 @@
 {
   "name": "@cyoot/electron-nexus",
   "version": "1.0.0",
-  "description": "Gerenciador de janelas robusto, tipado e orientado a objetos para Electron.",
+  "description": "Gerenciador de janelas robusto para Electron.",
+  
+  
+  "//": "Define explicitamente os pontos de entrada",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  
+  "//": "O exports moderno ajuda o Node a achar o caminho certo",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+
   "files": [
-    "dist"
+    "dist",
+    "LICENCE",
+    "README.md"
   ],
+
+  
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "npm run build"
@@ -19,6 +36,7 @@
     "electron": "^25.0.0",
     "typescript": "^5.0.0"
   },
+
   "keywords": [
     "electron",
     "window-manager",
@@ -29,4 +47,8 @@
   ],
   "author": "Carlosyoot",
   "license": "MIT"
+
+
+  
+  
 }
