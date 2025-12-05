@@ -1,4 +1,4 @@
-import { WindowBuilder, IpcChannel } from "../lib/lib"
+import { WindowBuilder, IpcChannel, WindowEvents } from "../lib"
 import path from "path"
 
 
@@ -7,17 +7,16 @@ export class MyWindow {
 
         new WindowBuilder()
         .setup({ width: 400, height:600})
-        .file(path.join(__dirname, 'index.html'))
+        .file(path.join(__dirname, '../../src/app/index.html'))
         .setup({ webPreferences: { preload: path.join(__dirname, "preload.js")}})
 
-        const ipc = new IpcChannel();
-
-        ipc.on("ping", (evt,win, dados) => {
-
+        new IpcChannel()
+        .on("ping", (evt, win, dados) => {
             console.log(dados);
-
             evt.reply("pong", { msg: "pong"});
+        })
 
-        });
+        new WindowEvents()
+
     }
 }

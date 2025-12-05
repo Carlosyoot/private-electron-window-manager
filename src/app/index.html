@@ -2,23 +2,32 @@
 <html>
 <head>
     <title>Teste da Lib</title>
-    <style>body { font-family: sans-serif; padding: 20px; background: #eee; }</style>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #eee; text-align: center; }
+        button { padding: 10px 20px; cursor: pointer; margin: 5px; }
+    </style>
 </head>
 <body>
-    <h1>Teste da Biblioteca</h1>
-    <button id="btn">Ping</button>
+    <h1>Teste de Janelas</h1>
+    
+    <button id="btn-ping">Ping</button>
+    <button id="btn-modal">Abrir Modal</button>
+    
     <p id="resultado">Aguardando...</p>
 
     <script>
-        // Ouve resposta do Backend
         window.api.on('pong', (data) => {
             document.getElementById('resultado').innerText = data.msg;
             document.getElementById('resultado').style.color = 'green';
         });
 
-        // Envia para o Backend
-        document.getElementById('btn').onclick = () => {
+        document.getElementById('btn-ping').onclick = () => {
             window.api.send('ping', { text: 'Olá Backend!' });
+        };
+
+        // NOVO: Ao clicar, pede pro backend abrir o modal
+        document.getElementById('btn-modal').onclick = () => {
+            window.api.send('request-modal', {});
         };
     </script>
 </body>
