@@ -1,20 +1,32 @@
 {
-  "name": "electron-window-manager",
+  "name": "@cyoot/electron-nexus",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Gerenciador de janelas robusto, tipado e orientado a objetos para Electron.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc",
-    "start": "npm run build && electron dist/app/main.js"
+    "prepublishOnly": "npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
-  "dependencies": {
-    "@types/node": "^24.10.1",
-    "dotenv": "^17.2.3",
-    "electron": "^39.2.4",
-    "express": "^5.2.0",
-    "typescript": "^5.9.3"
-  }
+  "peerDependencies": {
+    "electron": ">=20.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "electron": "^25.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": [
+    "electron",
+    "window-manager",
+    "ipc",
+    "typescript",
+    "builder",
+    "router"
+  ],
+  "author": "Carlosyoot",
+  "license": "MIT"
 }

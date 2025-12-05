@@ -1,5 +1,5 @@
 import { WindowContext } from "../core/WindowContext";
-import { NativeEventHandler } from "../declaration";
+import { NativeEventHandler } from "../types/lib";
 
 /**
  * **[TOOLKIT]** Gerenciador de Eventos Nativos.

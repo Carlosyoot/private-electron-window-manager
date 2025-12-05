@@ -1,6 +1,6 @@
 import { BrowserWindow, BrowserWindowConstructorOptions, ipcMain } from 'electron';
 import { WindowContext } from '../core/WindowContext';
-import { ClassRef, WindowConfig, WindowRef } from '../declaration'; // Ajuste conforme seu arquivo de tipos
+import { ClassRef, WindowConfig, WindowRef } from '../types/lib'; // Ajuste conforme seu arquivo de tipos
 import { Registry } from '../core/WindowRegistry';
 
 /**

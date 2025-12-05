@@ -1,5 +1,5 @@
 import { Registry } from "../core/WindowRegistry"; // Ajuste o caminho se necessário
-import { WindowRef } from "../declaration"; // Ajuste o caminho se necessário
+import { WindowRef } from "../types/lib"; // Ajuste o caminho se necessário
 
 /**
  * **[UTILS]** Roteador de Eventos (O "Carteiro").

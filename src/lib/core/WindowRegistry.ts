@@ -1,4 +1,4 @@
-import { WindowMetadata } from "../declaration";
+import { WindowMetadata } from "../types/lib";
 
 /**
  * **[INTERNO]** Serviço de Registro (Banco de Dados em Memória).

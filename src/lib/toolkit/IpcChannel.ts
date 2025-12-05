@@ -1,5 +1,5 @@
 import { WindowContext } from "../core/WindowContext";
-import { IpcMsgHandler, IpcInvokeHandler } from "../declaration";
+import { IpcMsgHandler, IpcInvokeHandler } from "../types/lib";
 
 /**
  * **[TOOLKIT]** Canal de Comunicação IPC (Inter-Process Communication).

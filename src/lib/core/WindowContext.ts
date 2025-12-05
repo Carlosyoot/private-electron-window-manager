@@ -1,4 +1,4 @@
-import { WindowConfig } from "../declaration";
+import { WindowConfig } from "../types/lib";
 
 /**
  * **[INTERNO]** Gerenciador de Contexto (Pilha de Configuração).

@@ -25,4 +25,4 @@ export type {
     NativeEventHandler, 
     WindowRef,
     ClassRef
-} from './declaration';
+} from './types/lib';

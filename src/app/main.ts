@@ -3,7 +3,11 @@ import { WindowController } from "../lib";
 import { MyWindow } from "./MyWindow";
 import { ModalWindow } from "./ModalWindow";
 
-const controller = new WindowController();
+const controller = new WindowController({
+    defaults:{
+        maximizable: true,
+    }
+});
 
 app.whenReady().then(() => {
     const mainWindowInstance = controller.open(MyWindow);
